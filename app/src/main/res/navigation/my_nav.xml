@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="id.ac.itn.gibolapps.ui.HomeFragment"
+        android:label="@string/fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/standingsFragment"
+        android:name="id.ac.itn.gibolapps.ui.StandingsFragment"
+        android:label="@string/fragment_standings"
+        tools:layout="@layout/fragment_standings" />
+    <fragment
+        android:id="@+id/scorersFragment"
+        android:name="id.ac.itn.gibolapps.ui.ScorersFragment"
+        android:label="@string/fragment_scorers"
+        tools:layout="@layout/fragment_scorers" />
+</navigation>

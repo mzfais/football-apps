@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GibolApps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_home">Home</string>
+    <string name="fragment_standings">Standings</string>
+    <string name="fragment_scorers">Scorers</string>
+</resources>
