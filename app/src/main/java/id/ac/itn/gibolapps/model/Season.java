@@ -1,12 +1,35 @@
 package id.ac.itn.gibolapps.model;
 
-import java.io.Serializable;
-
-public class Season implements Serializable {
+public class Season{
+	private Object winner;
+	private int currentMatchday;
+	private String endDate;
 	private int id;
 	private String startDate;
-	private String endDate;
-	private int currentMatchday;
+
+	public void setWinner(Object winner){
+		this.winner = winner;
+	}
+
+	public Object getWinner(){
+		return winner;
+	}
+
+	public void setCurrentMatchday(int currentMatchday){
+		this.currentMatchday = currentMatchday;
+	}
+
+	public int getCurrentMatchday(){
+		return currentMatchday;
+	}
+
+	public void setEndDate(String endDate){
+		this.endDate = endDate;
+	}
+
+	public String getEndDate(){
+		return endDate;
+	}
 
 	public void setId(int id){
 		this.id = id;
@@ -22,21 +45,5 @@ public class Season implements Serializable {
 
 	public String getStartDate(){
 		return startDate;
-	}
-
-	public void setEndDate(String endDate){
-		this.endDate = endDate;
-	}
-
-	public String getEndDate(){
-		return endDate;
-	}
-
-	public void setCurrentMatchday(int currentMatchday){
-		this.currentMatchday = currentMatchday;
-	}
-
-	public int getCurrentMatchday(){
-		return currentMatchday;
 	}
 }

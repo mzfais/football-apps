@@ -1,22 +1,12 @@
 package id.ac.itn.gibolapps.model;
 
-import java.io.Serializable;
-
-public class Competition implements Serializable {
-	private int id;
+public class Competition{
 	private Area area;
-	private String name;
-	private String code;
-	private String plan;
 	private String lastUpdated;
-
-	public void setId(int id){
-		this.id = id;
-	}
-
-	public int getId(){
-		return id;
-	}
+	private String code;
+	private String name;
+	private int id;
+	private String plan;
 
 	public void setArea(Area area){
 		this.area = area;
@@ -26,12 +16,12 @@ public class Competition implements Serializable {
 		return area;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setLastUpdated(String lastUpdated){
+		this.lastUpdated = lastUpdated;
 	}
 
-	public String getName(){
-		return name;
+	public String getLastUpdated(){
+		return lastUpdated;
 	}
 
 	public void setCode(String code){
@@ -42,19 +32,27 @@ public class Competition implements Serializable {
 		return code;
 	}
 
+	public void setName(String name){
+		this.name = name;
+	}
+
+	public String getName(){
+		return name;
+	}
+
+	public void setId(int id){
+		this.id = id;
+	}
+
+	public int getId(){
+		return id;
+	}
+
 	public void setPlan(String plan){
 		this.plan = plan;
 	}
 
 	public String getPlan(){
 		return plan;
-	}
-
-	public void setLastUpdated(String lastUpdated){
-		this.lastUpdated = lastUpdated;
-	}
-
-	public String getLastUpdated(){
-		return lastUpdated;
 	}
 }

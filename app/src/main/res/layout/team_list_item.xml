@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvPts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvGd"
+        app:layout_constraintTop_toTopOf="@+id/tvGd"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tvGd"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLoss"
+        app:layout_constraintStart_toEndOf="@+id/tvLoss"
+        app:layout_constraintTop_toTopOf="@+id/tvLoss"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="-25" />
+
+    <TextView
+        android:id="@+id/tvLoss"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDraw"
+        app:layout_constraintStart_toEndOf="@+id/tvDraw"
+        app:layout_constraintTop_toTopOf="@+id/tvDraw"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tvDraw"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWon"
+        app:layout_constraintStart_toEndOf="@+id/tvWon"
+        app:layout_constraintTop_toTopOf="@+id/tvWon"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tvWon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPlayedGames"
+        app:layout_constraintStart_toEndOf="@+id/tvPlayedGames"
+        app:layout_constraintTop_toTopOf="@+id/tvPlayedGames"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tvPosTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="18dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPosTeam"
+        app:layout_constraintStart_toEndOf="@+id/tvPosTeam"
+        app:layout_constraintTop_toTopOf="@+id/tvPosTeam" />
+
+    <TextView
+        android:id="@+id/tvTeamName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPosTeam"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/tvPosTeam"
+        tools:text="Manchester United" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <TextView
+        android:id="@+id/tvPlayedGames"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTeamName"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/tvTeamName"
+        tools:text="99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
