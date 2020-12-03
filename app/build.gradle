@@ -5,13 +5,18 @@ android {
 
     defaultConfig {
         applicationId "id.ac.itn.gibolapps"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         buildConfigField "String", "APIToken", apiToken
         buildConfigField "String", "BaseURL","\"https://api.football-data.org/v2/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {

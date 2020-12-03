@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     private static ApiClient mInstannce;
-    private Retrofit retrofit;
+    private final Retrofit retrofit;
 
     private ApiClient(){
         retrofit = new Retrofit.Builder()

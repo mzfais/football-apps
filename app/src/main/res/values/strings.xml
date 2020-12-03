@@ -5,7 +5,7 @@
     <string name="fragment_home">Home</string>
     <string name="fragment_standings">Standings</string>
     <string name="fragment_scorers">Scorers</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_settings">Settings</string>
 
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
