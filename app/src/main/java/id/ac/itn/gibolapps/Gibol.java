@@ -9,6 +9,12 @@ import android.os.Build;
 public class Gibol extends Application {
     public static final String CHANNEL_ID = "GibolChannel";
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        createNotificationChannel();
+    }
+
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel myChannel = new NotificationChannel(CHANNEL_ID, "Channel 1", NotificationManager.IMPORTANCE_HIGH);
