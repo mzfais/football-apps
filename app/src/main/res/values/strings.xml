@@ -5,4 +5,16 @@
     <string name="fragment_home">Home</string>
     <string name="fragment_standings">Standings</string>
     <string name="fragment_scorers">Scorers</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="notification_header">Notifications</string>
+    <string name="notif_title">Match Schedule Notifications</string>
+    <string name="notif_summary_on">Send me Match Schedule Notifications</string>
+    <string name="notif_summary_off">Match schedule notifications will not be sent</string>
+    <string name="schedule_reminder_key">schedule_reminder_key</string>
 </resources>
