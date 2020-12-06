@@ -29,7 +29,7 @@ public class ScorersViewModel extends ViewModel {
                 .enqueue(new Callback<ScorersList>() {
                     @Override
                     public void onResponse(Call<ScorersList> call, Response<ScorersList> response) {
-                        Log.d(TAG, "onResponse: "+response.body().getCount());
+                      //  Log.d(TAG, "onResponse: "+response.body().getCount());
                         if (response.isSuccessful()) {
                             scorersList.postValue(response.body());
                         }
