@@ -85,7 +85,7 @@ public class SettingsActivity extends AppCompatActivity {
             Calendar dueDate = Calendar.getInstance();
             Calendar currentDate = Calendar.getInstance();
             // Set Execution around 08:00:00 AM
-            dueDate.set(Calendar.HOUR_OF_DAY, 8);
+            dueDate.set(Calendar.HOUR_OF_DAY, 10);
             dueDate.set(Calendar.MINUTE, 0);
             dueDate.set(Calendar.SECOND, 0);
             if (dueDate.before(currentDate)) {
