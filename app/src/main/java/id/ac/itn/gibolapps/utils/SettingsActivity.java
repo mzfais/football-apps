@@ -78,6 +78,7 @@ public class SettingsActivity extends AppCompatActivity {
         private static Constraints getConstraint() {
             return new Constraints.Builder()
                     .setRequiredNetworkType(NetworkType.CONNECTED)
+                    .setRequiresDeviceIdle(false)
                     .build();
         }
 
