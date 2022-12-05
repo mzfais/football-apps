@@ -2,6 +2,7 @@ package id.ac.itn.gibolapps.adapter;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
+//import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -21,6 +24,7 @@ import id.ac.itn.gibolapps.model.Team;
 
 public class StandingTeamAdapter extends RecyclerView.Adapter<StandingTeamAdapter.ViewHolder> {
 
+    private static final String TAG = "StandingTeamAdapter";
     Context mtcx;
     List<TableItem> itemList;
 
@@ -44,7 +48,9 @@ public class StandingTeamAdapter extends RecyclerView.Adapter<StandingTeamAdapte
         Team team = tableItem.getTeam();
         holder.tvPos.setText(String.valueOf(tableItem.getPosition()));
         holder.tvTeamName.setText(String.valueOf(team.getName()));
-        GlideToVectorYou.init().with(mtcx).load(Uri.parse(team.getCrestUrl()), holder.ivLogo);
+//        Uri uri = Uri.parse(team.getCrest());
+        Glide.with(this.mtcx).load(team.getCrestUrl()).into(holder.ivLogo);
+//        GlideToVectorYou.init().with(mtcx).load(Uri.parse(team.getCrestUrl()), holder.ivLogo);
         holder.tvPlay.setText(String.valueOf(tableItem.getPlayedGames()));
         holder.tvWon.setText(String.valueOf(tableItem.getWon()));
         holder.tvDraw.setText(String.valueOf(tableItem.getDraw()));

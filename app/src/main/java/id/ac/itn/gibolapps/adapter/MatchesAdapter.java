@@ -47,13 +47,14 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.MatchVie
     @Override
     public void onBindViewHolder(@NonNull MatchViewHolder holder, int position) {
         MatchesItem matchesItem = getMatchesItemList().get(position);
-        holder.tvGroupInfo.setText(matchesItem.getGroup().toUpperCase() + ": MATCHDAY - " + String.valueOf(matchesItem.getMatchday()));
-        holder.tvDateInfo.setText(dc.UtcToLocal(matchesItem.getUtcDate()));
-        holder.tvHomeName.setText(matchesItem.getHomeTeam().getName());
-        holder.tvAwayName.setText(matchesItem.getAwayTeam().getName());
-        holder.tvHomeScore.setText((matchesItem.getStatus().equals("SCHEDULED") ? "-" : String.valueOf(matchesItem.getScore().getFullTime().getHomeTeam())));
-        holder.tvAwayScore.setText((matchesItem.getStatus().equals("SCHEDULED") ? "-" : String.valueOf(matchesItem.getScore().getFullTime().getAwayTeam())));
-
+        if(matchesItem !=null) {
+            holder.tvGroupInfo.setText(matchesItem.getGroup().toUpperCase() + ": MATCHDAY - " + String.valueOf(matchesItem.getMatchday()));
+            holder.tvDateInfo.setText(dc.UtcToLocal(matchesItem.getUtcDate()));
+            holder.tvHomeName.setText(matchesItem.getHomeTeam().getName());
+            holder.tvAwayName.setText(matchesItem.getAwayTeam().getName());
+            holder.tvHomeScore.setText((matchesItem.getStatus().equals("SCHEDULED") ? "-" : String.valueOf(matchesItem.getScore().getFullTime().getHomeTeam())));
+            holder.tvAwayScore.setText((matchesItem.getStatus().equals("SCHEDULED") ? "-" : String.valueOf(matchesItem.getScore().getFullTime().getAwayTeam())));
+        }
     }
 
     @Override

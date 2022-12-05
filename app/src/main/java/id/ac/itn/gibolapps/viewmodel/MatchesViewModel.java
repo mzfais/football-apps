@@ -30,7 +30,7 @@ public class MatchesViewModel extends ViewModel {
                     @Override
                     public void onResponse(Call<MatchesList> call, Response<MatchesList> response) {
                         if (response.isSuccessful()) {
-                            if (response.body().getCount() < 1) {
+                            if (!response.body().getMatches().isEmpty()) {
                                 setScheduledMatchesList();
                             } else {
                                 matchesList.postValue(response.body());
